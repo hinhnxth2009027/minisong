@@ -252,6 +252,16 @@
     border: white 5px solid;
 }
 
+.close_add_song {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    color: #ff0000;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 100000;
+}
+
 @media only screen and (max-width: 1640px) {
     .get_mySong div {
         width: 30%;
@@ -331,6 +341,17 @@
 }
 
 @media only screen and (max-width: 1249px) {
+
+    .close_add_song {
+        position: fixed;
+        top: -10px;
+        right: 10px;
+        color: #ff0000;
+        font-size: 50px;
+        cursor: pointer;
+        z-index: 100000;
+    }
+
     .menu {
         width: 100%;
         min-height: 12000px;
@@ -1113,16 +1134,6 @@ label {
 
 .msgsuccses_green {
     color: #9fff65;
-}
-
-.close_add_song {
-    position: fixed;
-    top: 20px;
-    right: 30px;
-    color: #ff0000;
-    font-size: 50px;
-    cursor: pointer;
-    z-index: 100000;
 }
 
 @-webkit-keyframes zoom {
