@@ -326,19 +326,19 @@
         background-image: linear-gradient(to bottom right, #fd0000, #4662ff, #ccd6ff);
         box-shadow: black 3px 6px 9px;
     }
-
+    .menu {
+        width: 15%;
+        min-height: 1800px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom right, #e66cff, #4662ff);
+        text-align: center;
+        display: block;
+    }
 }
 
-.menu {
-    width: 100%;
-    min-height: 12000px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-image: linear-gradient(to bottom right, #e66cff, #4662ff);
-    text-align: center;
-    display: none;
-}
+
 
 @media only screen and (max-width: 1249px) {
 
@@ -354,7 +354,7 @@
 
     .menu {
         width: 100%;
-        min-height: 12000px;
+        min-height: 1800px;
         position: fixed;
         top: 0;
         left: 0;

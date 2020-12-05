@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     txt_first_name.onblur = function () {
         if (txt_first_name.value.length < 1) {
-            msgerror.innerHTML = 'bạn vừa mới bỏ qua mục tên , đây là mục bắt buộc'
+            msgerror.innerHTML = 'You have just omitted the name entry, this is required'
             msgerror.classList.add('msgerror_red');
             msgerror.classList.remove('msgsuccses_green');
         } else {
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     txtLastName.onblur = function () {
         if (txtLastName.value.length < 1) {
-            msgerror.innerHTML = 'bạn vừa mới bỏ qua mục họ tên đây là mục bắt buộc'
+            msgerror.innerHTML = 'Bạn vừa bỏ qua mục nhập họ bắt buộc'
             msgerror.classList.add('msgerror_red');
             msgerror.classList.remove('msgsuccses_green');
         } else {
@@ -48,11 +48,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     txtEmail.onblur = function () {
         if (txtEmail.value.length < 1) {
-            msgerror.innerHTML = 'ồ! bạn vừa mới bỏ qua mục email nhưng đây là mục bắt buộc'
+            msgerror.innerHTML = 'Oh! you have just skipped the email section, but this is required'
             msgerror.classList.add('msgerror_red');
             msgerror.classList.remove('msgsuccses_green');
         } else if (txtEmail.value.length <= 7 && txtEmail.value.length >= 1) {
-            msgerror.innerHTML = 'email quá ngắn'
+            msgerror.innerHTML = 'Email is too short'
             msgerror.classList.add('msgerror_red');
             msgerror.classList.remove('msgsuccses_green');
         } else {
@@ -63,11 +63,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     url_avatar.onblur = function () {
         if (url_avatar.value.length < 1) {
-            msgerror.innerHTML = 'avatar sẽ hiển thị trên profile của bạn nên bạn ko thể bỏ qua'
+            msgerror.innerHTML = 'Avatar will be displayed on your profile so you cannot ignore it'
             msgerror.classList.add('msgerror_red');
             msgerror.classList.remove('msgsuccses_green');
         } else if (url_avatar.value.length <= 9 && url_avatar.value.length >= 1) {
-            msgerror.innerHTML = 'url avatar không đúng định dạng'
+            msgerror.innerHTML = 'Avatar url is not in the correct format'
             msgerror.classList.add('msgerror_red');
             msgerror.classList.remove('msgsuccses_green');
         } else {
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     txtaddress.onblur = function () {
         if (txtaddress.value.length < 1) {
-            msgerror.innerHTML = 'địa chỉ là mục bắt buộc nên bạn không thể bỏ qua'
+            msgerror.innerHTML = 'The address is required, so you cannot ignore it'
             msgerror.classList.add('msgerror_red');
             msgerror.classList.remove('msgsuccses_green');
         } else if (txtaddress.value.length >= 5) {
@@ -86,14 +86,14 @@ document.addEventListener('DOMContentLoaded', function () {
             msgerror.classList.remove('msgerror_red');
             msgerror.classList.add('msgsuccses_green');
         } else {
-            msgerror.innerHTML = 'vui lòng cho địa chỉ chi tiết hơn ';
+            msgerror.innerHTML = 'Please give more detailed address ';
             msgerror.classList.add('msgerror_red');
             msgerror.classList.remove('msgsuccses_green');
         }
     }
     telNumber.onblur = function () {
         if (telNumber.value.length < 1) {
-            msgerror.innerHTML = 'số điện thoại là mục bắt buộc và ko đc bỏ qua'
+            msgerror.innerHTML = 'Phone number is required and cannot be ignored'
             msgerror.classList.add('msgerror_red');
             msgerror.classList.remove('msgsuccses_green');
         } else if (telNumber.value.length >= 9 && telNumber.value.length <= 20) {
@@ -101,26 +101,26 @@ document.addEventListener('DOMContentLoaded', function () {
             msgerror.classList.remove('msgerror_red');
             msgerror.classList.add('msgsuccses_green');
         } else {
-            msgerror.innerHTML = 'số điện thoại sai định dạng';
+            msgerror.innerHTML = 'Incorrect phone number format';
             msgerror.classList.add('msgerror_red');
             msgerror.classList.remove('msgsuccses_green');
         }
     }
     pwdpassword.onblur = function () {
         if (pwdpassword.value.length < 1) {
-            msgerror.innerHTML = 'hãy điền mật khẩu để làm chìa khóa đăng nhập cho bạn'
+            msgerror.innerHTML = 'Please enter a password to be your login key'
             msgerror.classList.add('msgerror_red');
             msgerror.classList.remove('msgsuccses_green');
         } else if (pwdpassword.value.length >= 1 && pwdpassword.value.length < 4) {
-            msgerror.innerHTML = 'mật khẩu yếu !!!'
+            msgerror.innerHTML = 'Weak password !!!'
             msgerror.classList.add('msgerror_red');
             msgerror.classList.remove('msgsuccses_green');
         } else if (pwdpassword.value.length >= 4 && pwdpassword.value.length <= 8) {
-            msgerror.innerHTML = 'mật khẩu ok '
+            msgerror.innerHTML = 'Password ok'
             msgerror.classList.remove('msgerror_red');
             msgerror.classList.add('msgsuccses_green');
         } else {
-            msgerror.innerHTML = 'mật khẩu rất ok'
+            msgerror.innerHTML = 'The password is very ok'
             msgerror.classList.remove('msgerror_red');
             msgerror.classList.add('msgsuccses_green');
         }
@@ -155,15 +155,15 @@ document.addEventListener('DOMContentLoaded', function () {
             msgerror.classList.remove('msgerror_red');
             msgerror.classList.add('msgsuccses_green');
         } else if (pwdpassword.value.length >= 1 && pwdpassword.value.length < 4) {
-            msgerror.innerHTML = 'mật khẩu yếu !!!'
+            msgerror.innerHTML = 'Weak password !!!'
             msgerror.classList.add('msgerror_red');
             msgerror.classList.remove('msgsuccses_green');
         } else if (pwdpassword.value.length >= 4 && pwdpassword.value.length <= 8) {
-            msgerror.innerHTML = 'độ dài mật khẩu ok'
+            msgerror.innerHTML = 'Password length ok'
             msgerror.classList.remove('msgerror_red');
             msgerror.classList.add('msgsuccses_green');
         } else {
-            msgerror.innerHTML = 'độ dài mật khẩu rất ok (200)'
+            msgerror.innerHTML = 'Very ok password length (200)'
             msgerror.classList.remove('msgerror_red');
             msgerror.classList.add('msgsuccses_green');
         }
@@ -191,13 +191,13 @@ document.addEventListener('DOMContentLoaded', function () {
             xhr.onreadystatechange = function () {
                 if (this.readyState == 4) {
                     if (this.status == 201) {
-                        alert('đăng kí thành công đi tới đăng nhập');
+                        alert('Successful registration go to login');
                         var form_registerJsonObj = JSON.parse(this.responseText);
                         console.log(form_registerJsonObj);
                         modal_conten1.style.display='none'
                         modal_conten2.style.display='block'
                     } else {
-                        alert('đăng kí thất bại email này có thể đã đc sử dụng hoặc đang sai định dạng')
+                        alert('This email may have been in use or is in the wrong format')
                         console.log(this.status)
                     }
                 }
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
             xhr.setRequestHeader('Content-type', 'application/json')
             xhr.send(form_registerObjJson);
         } else {
-            alert("bạn đã bỏ trống hoặc điền thiếu thông tin trong form đăng kí của chúng tôi vui lòng điền đầy đủ thông tin theo yêu cầu")
+            alert("You have left blank or missing information in our registration form, please fill out the information as required")
         }
     });
     //khu vực code của thẻ đăng nhập
@@ -249,12 +249,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         conten_div_newSOng.style.display = 'block'
                         load_contents();
                     }else if (this.status==400){
-                        msg_login.innerHTML = 'không tìm thấy thông tin người dùng nếu chưa có tài khoản hãy đăng kí';
+                        msg_login.innerHTML = 'Can\'t find user information if you don\'t have an account, please register';
                         msg_login.classList.remove('msgerror_red');
                         msg_login.classList.add('msgsuccses_green');
                     }
                     else {
-                        msg_login.innerHTML = 'hiện tại đang gặp lỗi';
+                        msg_login.innerHTML = 'There is currently an error';
                         msg_login.classList.add('msgerror_red');
                         msg_login.classList.remove('msgsuccses_green');
                     }
@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             msg_login.classList.add('msgerror_red');
             msg_login.classList.remove('msgsuccses_green');
-            msg_login.innerHTML = 'vui lòng điền đầy đủ thông tin để đăng nhập';
+            msg_login.innerHTML = 'Please fill in the information to login';
         }
     });
 //khu vực code get new song {phần này căng thẳng quá từ 4h chiều đến 8h tối ngồi tìm lỗi chỉ vì chữ basic ko viết hoa}
@@ -306,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         }
                     }
                 } else {
-                    alert('không tìm thấy nội dung nào')
+                    alert('The content was not found and currently has an internet error')
                 }
             }
         }
@@ -359,7 +359,7 @@ document.addEventListener('DOMContentLoaded', function () {
             xhr.onreadystatechange = function () {
                 if (this.readyState == 4) {
                     if (this.status == 201) {
-                        alert('tải bài hát lên thành công');
+                        alert('Successfully uploaded songs');
                         var addSong_JsonObj = JSON.parse(this.responseText);
                         console.log(addSong_JsonObj)
                         name_addSong.value = '';
@@ -371,7 +371,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         message_addSong.value = '';
                         load_contents();
                     } else {
-                        alert('tải bài hát lên thất bại')
+                        alert('Failed to upload song, please check the entered information')
                     }
                 }
             }
@@ -380,7 +380,7 @@ document.addEventListener('DOMContentLoaded', function () {
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.send(obj_json_addSong);
         }else {
-            alert('bạn đã bỏ trống mục nào đó vui lòng điền đầy đủ và kiểm tra thông tin trước khi gửi đi')
+            alert('You have left something blank, please fill out and check the information before submitting')
         }
     });
     document.querySelector('.close_mysong').onclick = function (){
@@ -417,7 +417,7 @@ document.addEventListener('DOMContentLoaded', function () {
                       }
                   }
                 } else {
-                    alert('tải danh sách bài hát thất bại vui lòng kiểm tra kết nối');
+                    alert('Download playlist failed please check connection');
                     console.log(this.status)
                 }
             }
@@ -441,11 +441,11 @@ document.addEventListener('DOMContentLoaded', function () {
             if (this.readyState == 4) {
                 if (this.status == 201) {
                     var element = JSON.parse(this.responseText);
-                    myinfo.innerHTML = `<img src="${element.avatar}"><br><h1>${element.lastName} ${element.firstName}</h1><br><p>sdt: ${element.phone}</p><br><p>email: ${element.email}</p><br><p>address: ${element.address}</p><br><p>id:${element.id}</p><br><p>birthday: ${element.birthday}</p><br> `
+                    myinfo.innerHTML = `<img src="${element.avatar}"><br><h1>${element.lastName} ${element.firstName}</h1><br><p>Phone number: ${element.phone}</p><br><p>Email: ${element.email}</p><br><p>Address: ${element.address}</p><br><p>Id:${element.id}</p><br><p>Birthday: ${element.birthday}</p><br> `
                     console.log(element);
                     modal_conten4.style.display='block'
                 } else {
-                    alert('lấy thông tin người dùng thất bại');
+                    alert('Failed to retrieve user information');
                     console.log(this.status);
                 }
             }
