@@ -265,9 +265,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var btn_logout = document.querySelector('.logout');
     btn_logout.addEventListener('click', function () {
         localStorage.removeItem('wed_song_token');
+        document.querySelector('.conten_new_song').innerHTML = '';
         modal_conten2.style.display='block'
         conten_div_newSOng.style.display = 'none';
-        document.querySelector('.conten_new_song').innerHTML = '';
     });
     var conten_div_newSOng = document.querySelector('.new_song');
     function load_contents() {
@@ -447,4 +447,16 @@ document.addEventListener('DOMContentLoaded', function () {
         xhr.setRequestHeader('Content-Type', 'application/json')
         xhr.send();
     });
+});
+var btn_menu_nav_bar = document.querySelector('.nav_bar_menu');
+btn_menu_nav_bar.addEventListener('click',function (){
+   document.querySelector('.menu').style.display='block';
+   document.querySelector('.conten_new_song').style.display='none';
+   document.querySelector('.close_menu').style.display='block';
+});
+var btnclose_menu = document.querySelector('.close_menu');
+btnclose_menu.addEventListener('click',function (){
+    document.querySelector('.menu').style.display='none';
+    document.querySelector('.conten_new_song').style.display='block';
+    document.querySelector('.close_menu').style.display='none';
 });
