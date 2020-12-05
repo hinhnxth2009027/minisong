@@ -822,6 +822,15 @@
     }
 }
 
+@media only screen and (max-width: 683px) {
+    .add_song .index_name_col_min {
+        width: 20%;
+    }
+    .add_song .input_login {
+        width: 75%;
+    }
+}
+
 @media only screen and (max-width: 634px) {
     .conten_new_song div {
         width: 100%;
