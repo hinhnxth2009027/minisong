@@ -214,7 +214,15 @@ document.addEventListener('DOMContentLoaded', function () {
     var pwdpassword_login = document.querySelector('.login_password');
     var btnSubmit_login = document.querySelector('.submit_login');
     var btngoto_register = document.querySelector('.goto_register');
-    var msg_login = document.querySelector('.msg_login')
+    var msg_login = document.querySelector('.msg_login');
+
+    txtemail_login.onkeyup=function (){
+        msg_login.innerHTML='';
+    };
+    pwdpassword_login.onkeyup=function (){
+        msg_login.innerHTML='';
+    };
+
     btngoto_register.addEventListener('click', function () {
         modal_conten1.style.display='block'
         modal_conten2.style.display='none'
